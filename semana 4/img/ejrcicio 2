@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--comienzo del documento html-->
+<html>
+    <head>
+        <!--Muestra el titulo de la pag weben la pestaña del navegador web -->
+        <title>INTRO HTML</title>
+        <!--Confgura aceptación de simbolos y carcteres especiales -->
+        <meta charset="UTF-8"
+    </head>
+<body>
+<!--COLOCA titulo principal de las pag web -->
+<h1>INTRODUCCION HTML CSS</h1>
+<b><font color="red">TEXTO EN NEGRILLA Y COLOR ROJO</font></b>
+<br>
+<u> <i><font color="blue">Css hoja de estilo en cascada</font> </font></i></u>
+<hr align="center" width="50%"color=black>
+<font color="purple"><s>Lanzamiento en 1996.</s><i> Como complemento de documentos estructurados</i><b> Simple flexibe y con oros lenguajes</b></font>
+<hr align="center"width="88%">
+<font color="red" size="12" face="calibri">una ecuacion en tercer grado es :
+</font> A <sub><font color="blue">3</font></sub>+B<sub><font color="green">2</font></sub>+C 
+    
+</body>
+</html>
+</body>
+</html>
