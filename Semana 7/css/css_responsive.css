@@ -1,0 +1,225 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    max-height: 100%;
+}   
+body{
+    font-family: tahoma;
+    font-size: 18px;
+    background-image: url(../img/incap\ se\ invencible2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* seccion <header> */
+header{
+    background-color: lightskyblue;
+    border:2px solid yellowgreen;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-area:header;
+}
+ul{
+    padding: 0;
+    margin:0 1px;
+}
+li{
+    list-style: none;
+    font:bold 12px verdana;
+    margin:0 5px;
+}
+a{
+    color:wheat;
+    text-decoration: none;
+}
+#menu{
+    grid-area: nav;
+    background-color: blue;
+    border:2px solid greenyellow;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+/* css para menu y submenu de opciones */
+.menuB>li{
+    position: relative;
+    display: inline-block;
+}
+.menuB>li>a{
+    display: block;
+    padding: 15px 20px;
+    color: wheat;
+    text-decoration: none;
+}
+.menuB li a:hover{
+    color:lightgreen;
+    transition: all .3s;
+}
+/* submenu */
+.submenu{
+    position: absolute;
+    background-color: blue;
+    width: 120%;
+    display: none;
+}
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color: wheat;
+    text-decoration: none;
+}
+.menuB li:hover .submenu{
+    display: block;
+    z-index:100;
+}
+.buscarbox input{
+    height: 25px;
+    width: 0;
+    padding: 0;
+    border-radius: 40px;
+    border: 0px;
+    padding-right: 50px;
+    transition: 0.8s ease;
+}
+.buscarbox input:hover{
+    width: 150px;
+    padding-left: 10px;
+    outline: none;
+}
+/* seccion css <section> */
+#main{
+    grid-area: main;
+    border-radius: 22px;
+    border: 2px solid yellowgreen;
+    max-width: 100%;
+    height: auto;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);
+}
+figure{
+    display: inline;
+    margin:45px;
+    padding: 5px;
+}
+.programa{
+    display: inline-block;
+    margin:5px;
+    padding: 5px;
+    width: 45%;
+    height: 200px;
+    border-radius: 22px;
+    position: relative;
+    border: 1px solid black;
+
+}
+section article{
+    margin: 20px;
+}
+#sidebar{
+grid-area: sidebar;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: rgba(255,255,255,0.6);
+backdrop-filter: blur(5px);
+}
+iframe{
+    max-width: 100%;
+    height: auto;
+}
+#footer{
+    grid-area: footer;
+    padding-top: 20px;
+    border: 2px solid yellowgreen;
+    border-radius: 22px;
+    clear: both;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);
+}
+#redes a{
+    padding: 5px;
+    margin: 0px;
+}
+#redes a i:hover{
+    transform: scale(2.0);
+}
+i[class^=fa]{
+    color:grey;
+    font-size: 18px;
+}
+i[class^=fab]{
+    color:grey;
+    font-size: 30px;
+    border: 1px solid transparent;
+    margin: 0;
+}
+/* CSS GRID */
+#grid-container>*{
+    text-align: center;
+    box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.75);
+}
+/* VISTA PC : 3 COLUMNAS */
+#grid-container{
+    display: grid;
+    grid-gap:10px;
+    grid-template:
+    "header header header" 150px
+    "nav nav nav" 50px
+    "main main sidebar" 300px
+    "main main sidebar" 300px
+    "main main sidebar" 250px
+    "footer footer footer" 150px /
+    1300px 150px 300px;
+}
+/* VISTA CELULAR 1 COLUMNA */
+@media (max-width:640px){
+    #grid-container{
+        grid-template:
+        "header" 150px
+        "nav" 50px
+        "main" 1120px
+        "sidebar" 800px
+        "footer" 100px /
+        500px;
+        font-size: 60%;
+    }
+    #menu{
+        display: none;
+    }
+    #main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+    }
+    .programa{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto; 
+    }
+    iframe{
+        max-width: 100%;
+        height: auto;
+    }
+    .buscarbox{
+        display: none;
+    }
+}

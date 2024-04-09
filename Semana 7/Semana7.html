@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5</title>
+    <!-- Link bootstrap 5 -->   
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        div[class^=col]{
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <!-- Aplica Diseño web Responsive a ls columnas dispositivos moviles, en PC tiene un ancho de 80% y 20% respectivamente -->
+    <div class="row">
+        <div class="col-12 col-md-8 col-lg-6 border bg-success">ROW 1 BOOTSTRAP 5</div>
+        <div class="col-12 col-md-4 col-lg-6 border bg-success">ROW 1 BOOTSTRAP 5</div>
+    </div>
+    </div>
+    <!-- las columnas comienzan con un 100% de ancho en dispositivos moviles y aumentan hasta un 33,3% de ancho en PC -->
+    <div class="row">
+        <div class="col-12 col-md-4 border col-lg-4 bg-warning">ROW 2 BOOTSTRAP 5</div>
+        <div class="col-12 col-md-4 border col-lg-4 bg-warning">ROW 2 BOOTSTRAP 5</div>
+        <div class="col-12 col-md-4 border col-lg-4 bg-warning">ROW 2 BOOTSTRAP 5</div>
+    </div>
+    <!-- Las columnas siempre tienen un 100% de ancho en dispositvosmoviles, y un 50% en PC -->
+    <div class="row">
+        <div class="col-12 col-md-5 col-lg-6 border bg-danger">ROW 3 BOOTSTRAP 5</div>
+        <div class="col-12 col-md-7 col-lg-6 border bg-danger">ROW 3 BOOTSTRAP 5</div>
+    </div>
+</body>
+</html>
