@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link de sitio sweetalert mensajes más elegantes-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="./img/TRANSMILLENIO.jpeg" alt="" width="150" height="150">
+        <h1>VALIDACION INGRESO A SISTEMA TRASMILENIO</h1>
+        <h2>BIENVENIDO SR.USUARIO</h2>
+        <br><br>
+        <script>
+            const tm=2950;//valor pasaje tm
+            //entrada
+            let saldo= parseInt(prompt("INGRESE RECARGA DE SU TARJETA TU LLAVE"));
+            //CONDICIONAL
+            if(saldo>=tm){
+                swal("Estimado usuario","Ingrese a la estacion de trasmilenio","success");
+            }else{
+                swal("Estimado usuario","***** SALDO INSUFICIENTE*****","error");
+            }
+            document.write("PUEDE PERSONALIZAR SU TARJETA DE TU LLAVE...  ");
+        </script>
+    </center>
+</body>
+</html>

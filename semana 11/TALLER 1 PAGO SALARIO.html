@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGO SALARIO</title>
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+    <center>
+        <img src="./img/JS.jpeg" alt="" width="250" height="150">
+        <h1>EMPRESA LA VACANA</h1>
+        <h2>PAGO DE SALARIO EMPLEADO </h2>
+        <h3>VALOR DEL DIA $50.000 BONO $50.000</h3>
+        <script>
+            let dias, vdias, subtotal, bonificacion, total;
+            dias=parseInt(prompt("INGRESE DIAS TRABAJADOS"))
+            vdias=parseInt(prompt("INGRESE VALOR DIA"))
+            //CALCULAR VALOR $$ DIAS TRABAJADOS
+            subtotal=dias*vdias
+            //condicional
+            if(dias>15){
+                bonificacion=50.000
+                total=subtotal+bonificacion; //neto a pagar
+                //SALIDA A TABLA
+                document.write("<table><caption>RELACION DE PAGOS</caption><tr>DIAS TRABAJADOS</tr>", dias,"</td></tr><th>VALOR DIA $</th><td>", vdia, "</td></tr><th>BONIFICACION<td>", bonificacion,"</td></tr><tr><th>VALOR A PAGAR</td></tr>",total,"</td></tr></table>");
+            }else{
+                bonificacion=0
+                total=subtotal+bonificacion; //neto a pagar
+                //SALIDA A TABLA
+                document.write("<table><caption>RELACION DE PAGOS</caption><tr>DIAS TRABAJADOS</tr>", dias,"</td></tr><th>VALOR DIA $</th><td>", vdia, "</td></tr><th>BONIFICACION<td>", bonificacion,"</td></tr><tr><th>VALOR A PAGAR</td></tr>",total,"</td></tr></table>");
+
+            }
+
+
+
+        </script>
+
+
+
+
+    </center>
+</body>
+</html>

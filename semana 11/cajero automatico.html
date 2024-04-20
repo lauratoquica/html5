@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link de sitio sweetalert mensajes más elegantes-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+<body>
+    <center>
+        <img src="img/NUBANK.jpeg" alt="" width="150" height="150">
+        <h1>BANCO NUBANK</h1>
+        <h2>RETIRO DE DINERO CAJERO ELECTRONICO</h2>
+        <h3>BIENVENIDO SR.USUARIO</h3>
+        <br><br>
+        <script>
+            let sw=0;// variable de contrl en apagada
+            let cuenta=parseInt(prompt("INGRESE SU NUMEO DE CUENTA DE AHORRO"));
+            let saldo=parseInt(prompt("Ingrese saldo $ a consignar en cuenta"));
+            let valor=parseInt(prompt("ingrese valor del retiro"));
+            //condicional
+            if(valor>saldo){
+                swal("Estimado usuaario","****FONDOS INSUFICIENTES ****","error")
+            }else{
+                sw=1; //valor de control activada
+                var saldof=saldo-valor;//variable que actuliza saldo
+                swal("Estimado usuario","***RETIRE SU DINERO ****", "success");
+            }
+            // otro condicional mostrar saldo en panttalla
+            if(sw==0){
+                document.write("RECUERDE SU SALDO DISPONIBLE ES...$"+saldo);
+            }else{
+                document.write("NO OLVIDE RETIRAR SU TARJETA DE SALDO ACTUAL ES...$"+saldof);
+            }
+        </script>
+
+
+
+    </center>
+</body>
+</html>
