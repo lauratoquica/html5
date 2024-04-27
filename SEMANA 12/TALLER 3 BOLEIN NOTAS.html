@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletin notas</title>
+    <!-- link de sitio sweetalert mensajes más elegantes-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="./img/WhatsApp Image 2024-04-19 at 6.45.19 PM.jpeg" alt="" width="150" height="150">
+        <h1>BOLETIN NOTAS SEMESTRE A2024</h1>
+        <h2>MATERIA DDE JAVASCRIPT</h2>
+        <h3>NOTAS APLICADAS [ DESEMPEÑO - TALLERES DE CLASE - CUESTIONARIOS]</h3>
+        <br><br>
+        <script>
+            let suma_nota,prom;
+            suma_nota=0; //Sumatoria de notas
+            prom=0; //nota definitiva promedio de notas
+            num=1; //contador de notas
+            //
+            nombre_std=prompt("INGRESE NOMBRE ESTUDIANTE");
+            //CICLO WHILE NOTAS
+            while(num<=3) //tope maximo de notas ingresadas son 3
+            {
+                let nota_std=parseFloat(prompt("INGRESE NOTA STD [ DE 1 A 5]"));
+                suma_nota+=nota_std;
+                num++;
+            }
+
+            prom=suma_nota/3;
+
+            if(prom>=3.0)
+            {
+                swal("APRECIADO ESTUDIANTE","FELICITACIONES APROBASTE MATERIA DE JAVASCRIPT","succes");
+                document.write("HAS PASADO AL SEGUIENTE NIVEL DE PHP");
+            }
+            else{
+                swal("APRECIADO ESTUDIANTE","REPROBASTE LA MATERIA DE JAVASCRIPT");
+                document.write("DEBES DE HACER CURSO REMEDIAL DE RECUPERACION");
+            }
+
+            document.write("<br>"+"<br>");
+            document.write("***********************"+"<br>");
+            document.write("ESTUDIANTE.."+nombre_std+"<br>");
+            document.write("NOTA FINNAL DE JAVASCRIPT ES ...."+prom.tofixed(2)+"<br>");
+            document.write("***********************"+"<br>");
+        </script>
+    </center>
+</body>
+</html>

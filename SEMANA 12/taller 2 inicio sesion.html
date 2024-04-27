@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INICIO DE SESION</title>
+    <!-- link de sitio sweetalert mensajes más elegantes-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="./img/WhatsApp Image 2024-04-19 at 6.45.20 PM.jpeg" alt="" width="150" height="150">
+        <h1>VALIDACION INGRESO USUARIO</h1>
+        <h2>SISTEMA DE GESTION BANCO NUBANK</h2>
+        <h3>SE PERMITIRA  SOLO 3 INTENTOS</h3>
+        <br><br>
+        <script>
+            var sw=0;//vaiable de control de ingreso usuario, estado actual apagada
+            var clave=12345// calve signada de ingreso
+            //CICLO FOR
+            for(f=1;f<=3;f++)// son maximo 3 intentos
+            {
+                var pasw2=parseInt(prompt("INGRESE CONTRASEÑA DE INGRESO"));
+                //CONDICIONAL CLAVE
+                if(pasw2==clave)
+                {
+                    swal("APRESIADO USUARIO","ACCESO OTORGADO","success");
+                    sw=1; //cambia de estado a activa
+                    break; //salir del bucle
+                }
+            }
+            //SALIDA FINAL
+            if(sw==0)
+                {
+                    swal("APRESIADO USUARIO","ACCESO BLOQUEADO","error");
+                    document.write("***BIENVENIDO SR.USUARIO AL SISTEMA DE GESTION BANCO NUBANK***");
+                }
+        </script>
+    </center>
+</body>
+</html>
