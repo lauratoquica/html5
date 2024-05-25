@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOTON TOGLE</title>
+    <link rel="stylesheet" href="./css/toggle.css">
+<!-- enlace icono fontawesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+<center>
+<div>
+    <h1>BOTON TOGLE DARK-LIGHT</h1>
+    <h2>EVENTO OCHANGE - ADDEVENTLISTENER</h2>
+    <br>
+    <p><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi delectus repellendus, nemo temporibus quod quae. Vitae eum dolorum ea, magni expedita odit a quae debitis illo. Sint nemo consequatur quasi.</span><span>Animi unde nostrum corporis, blanditiis, modi similique, vel laudantium tempore non odio dignissimos aspernatur suscipit tenetur accusamus voluptatum libero quam placeat quae! Excepturi quidem aperiam, dolor fugiat velit recusandae tempore?</span><span>Ipsum autem nam, sapiente repellat nulla atque vero ipsa. Blanditiis iste vero quod, sint, quis ullam ipsam tenetur labore modi sequi, error ipsa dignissimos earum quidem? Nisi eaque quisquam fugit?</span><span>Nemo reprehenderit assumenda maiores molestias facere atque dicta consequuntur veniam! Totam recusandae possimus eum cum deserunt exercitationem. Exercitationem, tempore eaque tenetur asperiores ratione illum amet repellendus, nesciunt laborum deleniti sint!</span></p>
+    <br><br>
+    <!-- seccion de boton togle dark / light -->
+    <input type="checkbox" name="" id="chk" clas="checkbox">
+    <label for="chk" class="label">
+<i class="fas fa-sun" ></i>
+<i class="fas fa-moon"></i>
+<div class="ball"></div>
+    </label>
+</div>
+</center>   
+<script>
+let chk=document.getElementById('chk');
+chk.addEventListener('chance',()=>{
+document.body.classList.toggle('dark');
+});
+</script> 
+</body>
+</html>
